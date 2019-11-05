@@ -1,0 +1,26 @@
+extends layout
+
+
+block scripts
+
+block content
+	h1= title
+
+	h3(id = 'info') Player 1 starts the game
+
+		
+	
+	div(id='board')
+		- var tableSize = 5;
+		table(id = 'tableClass')
+			- for (var i=0; i<tableSize; i++)
+				tr
+					- for (var j=0; j<tableSize; j++)
+						td(class = 'cellStyle' action='/index/asd')
+
+	button(
+		id = 'restart'
+	) Restart
+	script(src='/javascripts/game.js')
+	
+
